@@ -1,6 +1,6 @@
 Name: makedepend
-Version: 1.0.0
-Release: %mkrel 3
+Version: 1.0.1
+Release: %mkrel 1
 Summary: Create dependencies in makefiles
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
@@ -34,6 +34,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/makedepend
-%{_mandir}/man1/makedepend.1x.bz2
-
+%{_mandir}/man1/makedepend.1*.bz2
 
