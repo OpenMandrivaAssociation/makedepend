@@ -1,5 +1,5 @@
 Name: makedepend
-Version: 1.0.2
+Version: 1.0.3
 Release: %mkrel 1
 Summary: Create dependencies in makefiles
 Group: Development/X11
