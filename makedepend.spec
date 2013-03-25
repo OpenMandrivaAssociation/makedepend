@@ -3,7 +3,7 @@ Version:	1.0.4
 Release:	1
 Summary:	Create dependencies in makefiles
 Group:		Development/X11
-Source:		http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
 License:	MIT
 
 BuildRequires:	x11-proto-devel >= 1.0.0
@@ -18,6 +18,9 @@ which include directives would be used in a compilation.
 %setup -q -n %{name}-%{version}
 
 %build
+#fix build with new automake
+sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' configure.*
+autoreconf -fi
 %configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
