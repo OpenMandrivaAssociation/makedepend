@@ -1,7 +1,7 @@
 Summary:	Create dependencies in makefiles
 Name:		makedepend
 Version:	1.0.5
-Release:	11
+Release:	12
 Group:		Development/X11
 License:	MIT
 Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
