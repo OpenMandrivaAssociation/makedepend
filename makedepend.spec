@@ -1,7 +1,7 @@
 Summary:	Create dependencies in makefiles
 Name:		makedepend
-Version:	1.0.5
-Release:	13
+Version:	1.0.6
+Release:	1
 Group:		Development/X11
 License:	MIT
 Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
@@ -14,22 +14,18 @@ C-preprocessor, processing all C #* directives so that it can correctly tell
 which include directives would be used in a compilation.
 
 %prep
-%setup -q
-#fix build with new automake
-sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,g' configure.*
-autoreconf -fi
+%autosetup -p1
 
 %build
-%configure2_5x \
-	--x-includes=%{_includedir}\
+%configure \
+	--x-includes=%{_includedir} \
 	--x-libraries=%{_libdir}
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/makedepend
 %{_mandir}/man1/makedepend.1*
-
