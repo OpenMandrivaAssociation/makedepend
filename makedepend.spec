@@ -1,10 +1,10 @@
 Summary:	Create dependencies in makefiles
 Name:		makedepend
-Version:	1.0.6
+Version:	1.0.7
 Release:	1
 Group:		Development/X11
 License:	MIT
-Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
 BuildRequires:	pkgconfig(xproto) >= 1.0.0
 
@@ -28,4 +28,4 @@ which include directives would be used in a compilation.
 
 %files
 %{_bindir}/makedepend
-%{_mandir}/man1/makedepend.1*
+%doc %{_mandir}/man1/makedepend.1*
