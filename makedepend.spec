@@ -1,6 +1,6 @@
 Summary:	Create dependencies in makefiles
 Name:		makedepend
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 Group:		Development/X11
 License:	MIT
