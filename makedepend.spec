@@ -5,6 +5,11 @@ Release:	1
 Group:		Development/X11
 License:	MIT
 Source0:	http://xorg.freedesktop.org/releases/individual/util/%{name}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(xorg-macros) >= 1.0.1
 BuildRequires:	pkgconfig(xproto) >= 1.0.0
 
